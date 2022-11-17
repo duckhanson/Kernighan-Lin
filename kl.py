@@ -74,7 +74,7 @@ class KernighanLin():
         for i in range(len(self.graph.vertices)/2, len(self.graph.vertices)):
             self.graph.vertices[i].partition_label = "B"
         
-        print "Initial partition cost: " + str(self.graph.get_partition_cost())
+        print("Initial partition cost: " + str(self.graph.get_partition_cost()))
         p = 0 # pass
         total_gain = 0
        
@@ -150,10 +150,10 @@ class KernighanLin():
                             
                 p += 1
                 total_gain += g_max
-                print "Pass: " + str(p) + "\t\t\tGain: " + str(g_max)
+                print("Pass: " + str(p) + "\t\t\tGain: " + str(g_max))
             else: break
             
-        print "Total passes: " + str(p) + "\t\tTotal gain: " + str(total_gain) + "\t\tFinal partition cost: " + str(self.graph.get_partition_cost()) 
+        print("Total passes: " + str(p) + "\t\tTotal gain: " + str(total_gain) + "\t\tFinal partition cost: " + str(self.graph.get_partition_cost())) 
         
 def main():
     graph = load_data("data.txt")
